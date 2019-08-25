@@ -4,10 +4,9 @@ import NavBottom from '../NavBottom';
 import Filter from '../Filter';
 import Item from '../Item';
 import FloatButton from '../FloatButton';
-import Pagination from '../index/Pagination';
+import Pagination from '../Pagination';
 
 import { Link } from 'react-router-dom';
-
 
 export default class ContentPanel extends Component {
   render() {
