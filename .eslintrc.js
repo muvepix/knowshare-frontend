@@ -29,5 +29,7 @@ module.exports = {
     'no-param-reassign': 'off',
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
+    'react/prop-types': 0,
+    'no-underscore-dangle': 0,
   },
 };
