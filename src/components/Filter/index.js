@@ -1,6 +1,5 @@
 import React from 'react';
 import { Filter, FilterContainer, FilterSelect } from './styles';
-import './Filter.css';
 
 export default function index() {
   return (
