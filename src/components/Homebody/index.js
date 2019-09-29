@@ -1,15 +1,17 @@
-import React, { Component } from 'react'
-import './Homebody.css'
+import React from 'react';
+import { Homebody, HomebodyTitle } from './styles';
+import './Homebody.css';
 
-export default class Homebody extends Component {
-    render() {
-        return (
-            <div className="Homebody">
-                <div className="HomebodyTitle">
-                <h1>VEJA COMO É SIMPLES COMEÇAR</h1>
-                <h4>Para começar a contribuir com a nossa comunidade, basta seguir os seguintes passos :)</h4>
-                </div>
-            </div>
-        )
-    }
+export default function index() {
+  return (
+    <Homebody>
+      <HomebodyTitle>
+        <h1>VEJA COMO É SIMPLES COMEÇAR</h1>
+        <h4>
+          Para começar a contribuir com a nossa comunidade, basta seguir os
+          seguintes passos :)
+        </h4>
+      </HomebodyTitle>
+    </Homebody>
+  );
 }
