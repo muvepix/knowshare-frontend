@@ -1,6 +1,5 @@
 import React from 'react';
 import { Homebody, HomebodyTitle } from './styles';
-import './Homebody.css';
 
 export default function index() {
   return (
