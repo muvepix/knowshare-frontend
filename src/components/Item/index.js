@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import io from 'socket.io-client';
@@ -8,15 +8,16 @@ import Bar from '../Bar';
 import './Item.css';
 import like from '../../images/like.png';
 
+import PostContext from '../../context/post/postContext';
+
 export default function Item() {
   const [items, setItems] = useState([]);
+  const postContext = useContext(PostContext);
 
   useEffect(() => {
-    const getPosts = async () => {
-      await axios.get(`${process.env.REACT_APP_URL}/posts`).then(res => {
-        setItems({ items: res.data });
-      });
-    };
+    const GetPosts = async () => {
+      const posts = await postContext.getPost();
+    }
     const registerToSocket = () => {
       const socket = io(process.env.REACT_APP_URL);
 
@@ -35,9 +36,9 @@ export default function Item() {
         });
       });
     };
-    getPosts();
+    GetPosts();
     registerToSocket();
-  });
+  }, []);
 
   const handleLike = async id => {
     await axios.post(`${process.env.REACT_APP_URL}/posts/${id}/like`);
