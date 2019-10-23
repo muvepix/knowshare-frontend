@@ -1,5 +1,7 @@
 # knowshare-frontend
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/muvesoft/knowshare-frontend.svg)](https://greenkeeper.io/)
+
 ## Get Started
 
 Open http://localhost:3000 to view it in the browser. Your app is ready to be deployed!
