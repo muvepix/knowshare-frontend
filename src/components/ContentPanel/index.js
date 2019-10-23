@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import SearchPanel from '../SearchPanel';
 import NavBottom from '../NavBottom';
 import Filter from '../Filter';
@@ -6,14 +7,11 @@ import Item from '../Item';
 import FloatButton from '../FloatButton';
 import Pagination from '../index/Pagination';
 
-import { Link } from 'react-router-dom';
-
-
 export default class ContentPanel extends Component {
   render() {
     return (
       <div className="contentPanel">
-        <Link to="/newPost">
+        <Link to="/posts/new">
           <FloatButton />
         </Link>
         <NavBottom />

@@ -16,7 +16,7 @@ export default function Routes() {
 
       <Route path="/login" component={SignIn} />
 
-      <Route path="/posts/create" component={NewPost} />
+      <Route path="/posts/new" component={NewPost} />
     </Switch>
   );
 }
