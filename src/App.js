@@ -5,14 +5,18 @@ import GlobalStyle from './styles/global';
 
 import Routes from './routes';
 
+import PostState from '../src/context/post/PostState';
+
 import './App.css';
 
 function App() {
   return (
-    <BrowserRouter>
+    <PostState>
+      <BrowserRouter>
       <GlobalStyle />
       <Routes />
     </BrowserRouter>
+    </PostState>
   );
 }
 

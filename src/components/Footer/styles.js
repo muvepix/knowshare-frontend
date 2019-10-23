@@ -13,6 +13,7 @@ export const FooterItem = styled.div`
     text-align: left;
   }
   &:nth-child(2) h4 {
+    text-align: center;
     margin: 0 auto;
   }
   &:nth-child(3) {

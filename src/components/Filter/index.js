@@ -1,24 +1,21 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import './Filter.css';
+import React from 'react';
+import { Filter, FilterContainer, FilterSelect } from './styles';
 
-export default class NavBottom extends Component {
-  render() {
-    return (
-      <div class="Filter">
-        <div className="container">
-          <div className="FilterContainer">
-            Ordenar por:
-            <select name="" id="filterSelect">
-              <option value="">Recomendados</option>
-              <option value="">Tendências</option>
-              <option value="">Adicionados Recentemente</option>
-              <option value="">Melhor avaliação</option>
-              <option value="">Mais Comentados</option>
-            </select>
-          </div>
-        </div>
+export default function index() {
+  return (
+    <Filter>
+      <div className="container">
+        <FilterContainer>
+          Ordenar por:
+          <FilterSelect name="">
+            <option value="">Recomendados</option>
+            <option value="">Tendências</option>
+            <option value="">Adicionados Recentemente</option>
+            <option value="">Melhor avaliação</option>
+            <option value="">Mais Comentados</option>
+          </FilterSelect>
+        </FilterContainer>
       </div>
-    );
-  }
+    </Filter>
+  );
 }

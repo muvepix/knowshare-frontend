@@ -1,56 +1,61 @@
-import React, { Component } from 'react';
-import { withStyles } from '@material-ui/styles';
-import { Link } from 'react-router-dom';
+import React from 'react';
+
 import Button from '../Button';
 
-import styles from '../../styles/NavbarStyles';
+import {
+  Nav,
+  Navbar,
+  Logo,
+  NavLinksLeft,
+  LoginLink,
+  NavLinksRight,
+  Burger,
+} from './styles';
 
 import logo from '../../images/logo.png';
 
 import './Navbar.css';
 
-class Navbar extends Component {
-  render() {
-    return (
-      <div class="container-full">
-        <nav>
-          <div className="container navbar">
-            <div>
-              <Link to="" class="logo">
-                <img src={logo} alt="" srcset="" />
-                <h4>KnowShare</h4>
-              </Link>
-            </div>
-            <ul class="nav-links-left">
-              <li>
-                <a href="">Quem somos</a>
-              </li>
-              <li>
-                <a href="">Como contribuir</a>
-              </li>
-              <li>
-                <a href="">Ajuda</a>
-              </li>
-            </ul>
-            <ul class="nav-links-right">
-              <li>
-                <Link to="/login" class="loginLink">
-                  Login
-                </Link>
-              </li>
-              <li>
-                <Button outline linkTo="/register">Cadastrar</Button>
-              </li>
-            </ul>
-            <div class="burger">
-              <div class="line1" />
-              <div class="line2" />
-              <div class="line3" />
-            </div>
+function index() {
+  return (
+    <div className="container-full">
+      <Nav>
+        <Navbar className="container">
+          <div>
+            <Logo to="">
+              <img src={logo} alt="" />
+              <h4>KnowShare</h4>
+            </Logo>
           </div>
-        </nav>
-      </div>
-    );
-  }
+          <NavLinksLeft>
+            <li>
+              <a href="">Quem somos</a>
+            </li>
+            <li>
+              <a href="">Como contribuir</a>
+            </li>
+            <li>
+              <a href="">Ajuda</a>
+            </li>
+          </NavLinksLeft>
+          <NavLinksRight>
+            <li>
+              <LoginLink to="/login">Login</LoginLink>
+            </li>
+            <li>
+              <Button outline linkTo="/register">
+                Cadastrar
+              </Button>
+            </li>
+          </NavLinksRight>
+          <Burger>
+            <div className="line1" />
+            <div className="line2" />
+            <div className="line3" />
+          </Burger>
+        </Navbar>
+      </Nav>
+    </div>
+  );
 }
-export default withStyles(styles)(Navbar);
+export default index;

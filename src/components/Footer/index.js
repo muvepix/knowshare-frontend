@@ -1,6 +1,13 @@
 import React from 'react';
 
-import { Footer, FooterItem, FooterList, FooterIcon, FooterBottom, FooterRow } from './styles'
+import {
+  Footer,
+  FooterItem,
+  FooterList,
+  FooterIcon,
+  FooterBottom,
+  FooterRow,
+} from './styles';
 
 import linkedinIcon from '../../images/linkedin.svg';
 import facebookIcon from '../../images/facebook.svg';
@@ -27,20 +34,35 @@ export default function index() {
             </li>
           </FooterList>
         </FooterItem>
-        <FooterItem className="logo">
+        <FooterItem>
           <h4>KnowShare</h4>
         </FooterItem>
         <FooterItem>
-          <FooterIcon src={linkedinIcon} alt="" srcset="" className="footerIcon" />
-          <FooterIcon src={facebookIcon} alt="" srcset="" className="footerIcon" />
-          <FooterIcon src={instagramIcon} alt="" srcset="" className="footerIcon" />
+          <FooterIcon
+            src={linkedinIcon}
+            alt=""
+            srcset=""
+            className="footerIcon"
+          />
+          <FooterIcon
+            src={facebookIcon}
+            alt=""
+            srcset=""
+            className="footerIcon"
+          />
+          <FooterIcon
+            src={instagramIcon}
+            alt=""
+            srcset=""
+            className="footerIcon"
+          />
         </FooterItem>
       </FooterRow>
       <FooterRow>
-      <FooterBottom>
-        <hr />
-        <p>&copy; KnowShare 2019 - Vinicius Oliveira - All rights reserved</p>
-      </FooterBottom>
+        <FooterBottom>
+          <hr />
+          <p>&copy; KnowShare 2019 - Vinicius Oliveira - All rights reserved</p>
+        </FooterBottom>
       </FooterRow>
     </Footer>
   );
