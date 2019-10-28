@@ -7,8 +7,6 @@ import Item from '../Item';
 import FloatButton from '../FloatButton';
 import Pagination from '../Pagination';
 
-import { Link } from 'react-router-dom';
-
 export default class ContentPanel extends Component {
   render() {
     return (

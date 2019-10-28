@@ -5,7 +5,7 @@ import GlobalStyle from './styles/global';
 
 import Routes from './routes';
 
-import PostState from '../src/context/post/PostState';
+import PostState from './context/post/PostState';
 
 import './App.css';
 
@@ -13,9 +13,9 @@ function App() {
   return (
     <PostState>
       <BrowserRouter>
-      <GlobalStyle />
-      <Routes />
-    </BrowserRouter>
+        <GlobalStyle />
+        <Routes />
+      </BrowserRouter>
     </PostState>
   );
 }

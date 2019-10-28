@@ -5,6 +5,7 @@ import HomePage from '../pages/Homepage';
 import Content from '../pages/Content';
 
 import SignIn from '../pages/Login';
+import SignUp from '../pages/SignUp';
 
 import NewPost from '../pages/NewPost';
 
@@ -15,6 +16,7 @@ export default function Routes() {
       <Route path="/content" component={Content} />
 
       <Route path="/login" component={SignIn} />
+      <Route path="/register" component={SignUp} />
 
       <Route path="/posts/new" component={NewPost} />
     </Switch>
